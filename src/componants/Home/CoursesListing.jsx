@@ -3,14 +3,17 @@ import styled from 'styled-components';
 import bookImg from '../../assets/book.png';
 import CardImage from '../../assets/course-card-image.png';
 import SupervisorAccountIcon from '@mui/icons-material/SupervisorAccount';
+import StarIcon from '@mui/icons-material/Star';
+import ImportContactsIcon from '@mui/icons-material/ImportContacts';
+import AccountCircleIcon from '@mui/icons-material/AccountCircle';
 function CoursesListing() {
   return (
     <Wrapper className='container-fluid py-4'>
-      <section className='container py-3'>
+      <section className='container py-3 mt-5'>
         <div className="row">
           <div className="col-md-6">
-          <h3 className="w-50 courses_heading">Find the Right
-          Online Course for you</h3></div>
+          <h3 className="courses_heading">Find the Right
+          <br/><b>Online Course for you</b></h3></div>
           <div className="col-md-6 d-flex justify-content-start align-items-center">
             <div className="tabs w-100 d-flex justify-content-between align-items-center">
            <li><a className="a-tag-course" href='#'>All</a></li>
@@ -24,7 +27,7 @@ function CoursesListing() {
           </div> 
           <div className='container pt-5'>
             <div className='row'>
-              <div className="col-md-4 course-card-wrapper px-3">
+              <div className="col-md-4 course-card-wrapper">
                 <div className="feature-card-item card-flip">
                   <div className="front-of-card front pt-5 pb-2 shadow-lg bg-white d-flex flex-column align-items-center justify-content-center">
                     <div className='py-3'> <img src={CardImage} className='course-card-image'/></div>
@@ -32,14 +35,118 @@ function CoursesListing() {
                       <span className='tag-course'><a href='#'>Arts & Science</a></span>
                        <h4 className='tag-heading'>Using Creative Problem Solving</h4>
                     </div>
-                    <div className='rating-section d-flex justify-content-between'>
+                    <div className='rating-section d-flex w-100 mt-3 pt-2 justify-content-between'>
                         <div className="book-container">
                         <img src={bookImg} className='cat-image' alt='course image'/>
                         <span class="lessons-count"> 10 Lessons</span>
                         </div>
+                        <div><SupervisorAccountIcon style={{"color":"#7537f8"}}/> <span className='purple taken-count'>480</span></div>
                     </div>
                   </div>
-                  <div className="back-of-card back bg-dark">
+                  <div className="back-of-card shadow-lg back" style={{backgroundImage:`url("${CardImage}")`, backgroundPosition:"70% 75%",backgroundRepeat:"no-repeat", backgroundSize:"50% 50%"}}>
+                   <div className='purple-overlay position-absolute top-0 w-100'></div>
+                    <div className='back-content py-3 h-100 w-100 d-flex flex-column align-items-start justify-content-between'>
+                      <div className='pt-4 d-flex flex-column'>           
+                                 <span className='tag-course-white bg-white'><a href='#'>Arts & Science</a>
+                                 </span>
+                                 <h4 className='tag-heading text-start py-2 text-white'>Using Creative Problem Solving</h4>
+                                 <p className='rating-stars text-start py-1'><StarIcon style={{color:"yellow"}}/><StarIcon style={{color:"yellow"}}/><StarIcon style={{color:"yellow"}}/><StarIcon style={{color:"yellow"}}/><StarIcon style={{color:"yellow"}}/></p>
+                                 <p className='price-tag py-1 text-start text-white'>Price: $400</p>
+                                 
+                      </div>
+                      <div className='back-footer w-100 text-start'>
+                        <div className='Author-Wrapper text-white pb-3'><AccountCircleIcon style={{color:"#fff", marginRight:"10px", fontSize: "25px"}} />Alexandar Wang</div>
+                      <div className='d-flex w-100 mt-3 back-rating pt-2 justify-content-between'>
+                        <div className="book-container">
+                        <ImportContactsIcon style={{"color":"#fff"}}/>
+                        <span class="lessons-count text-white"> 10 Lessons</span>
+                        </div>
+                        <div><SupervisorAccountIcon style={{"color":"#fff"}}/> <span className='text-white taken-count'>480</span></div>
+                    </div>
+                    </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div className="col-md-4 course-card-wrapper">
+                <div className="feature-card-item card-flip">
+                  <div className="front-of-card front pt-5 pb-2 shadow-lg bg-white d-flex flex-column align-items-center justify-content-center">
+                    <div className='py-3'> <img src={CardImage} className='course-card-image'/></div>
+                    <div className="content-card text-start pt-3">
+                      <span className='tag-course'><a href='#'>Arts & Science</a></span>
+                       <h4 className='tag-heading'>Using Creative Problem Solving</h4>
+                    </div>
+                    <div className='rating-section d-flex w-100 mt-3 pt-2 justify-content-between'>
+                        <div className="book-container">
+                        <img src={bookImg} className='cat-image' alt='course image'/>
+                        <span class="lessons-count"> 10 Lessons</span>
+                        </div>
+                        <div><SupervisorAccountIcon style={{"color":"#7537f8"}}/> <span className='purple taken-count'>480</span></div>
+                    </div>
+                  </div>
+                  <div className="back-of-card shadow-lg back" style={{backgroundImage:`url("${CardImage}")`, backgroundPosition:"70% 75%",backgroundRepeat:"no-repeat", backgroundSize:"50% 50%"}}>
+                   <div className='purple-overlay position-absolute top-0 w-100'></div>
+                    <div className='back-content py-3 h-100 w-100 d-flex flex-column align-items-start justify-content-between'>
+                      <div className='pt-4 d-flex flex-column'>           
+                                 <span className='tag-course-white bg-white'><a href='#'>Arts & Science</a>
+                                 </span>
+                                 <h4 className='tag-heading text-start py-2 text-white'>Using Creative Problem Solving</h4>
+                                 <p className='rating-stars text-start py-1'><StarIcon style={{color:"yellow"}}/><StarIcon style={{color:"yellow"}}/><StarIcon style={{color:"yellow"}}/><StarIcon style={{color:"yellow"}}/><StarIcon style={{color:"yellow"}}/></p>
+                                 <p className='price-tag py-1 text-start text-white'>Price: $400</p>
+                                 
+                      </div>
+                      <div className='back-footer w-100 text-start'>
+                        <div className='Author-Wrapper text-white pb-3'><AccountCircleIcon style={{color:"#fff", marginRight:"10px", fontSize: "25px"}} />Alexandar Wang</div>
+                      <div className='d-flex w-100 mt-3 back-rating pt-2 justify-content-between'>
+                        <div className="book-container">
+                        <ImportContactsIcon style={{"color":"#fff"}}/>
+                        <span class="lessons-count text-white"> 10 Lessons</span>
+                        </div>
+                        <div><SupervisorAccountIcon style={{"color":"#fff"}}/> <span className='text-white taken-count'>480</span></div>
+                    </div>
+                    </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div className="col-md-4 course-card-wrapper">
+                <div className="feature-card-item card-flip">
+                  <div className="front-of-card front pt-5 pb-2 shadow-lg bg-white d-flex flex-column align-items-center justify-content-center">
+                    <div className='py-3'> <img src={CardImage} className='course-card-image'/></div>
+                    <div className="content-card text-start pt-3">
+                      <span className='tag-course'><a href='#'>Arts & Science</a></span>
+                       <h4 className='tag-heading'>Using Creative Problem Solving</h4>
+                    </div>
+                    <div className='rating-section d-flex w-100 mt-3 pt-2 justify-content-between'>
+                        <div className="book-container">
+                        <img src={bookImg} className='cat-image' alt='course image'/>
+                        <span class="lessons-count"> 10 Lessons</span>
+                        </div>
+                        <div><SupervisorAccountIcon style={{"color":"#7537f8"}}/> <span className='purple taken-count'>480</span></div>
+                    </div>
+                  </div>
+                  <div className="back-of-card shadow-lg back" style={{backgroundImage:`url("${CardImage}")`, backgroundPosition:"70% 75%",backgroundRepeat:"no-repeat", backgroundSize:"50% 50%"}}>
+                   <div className='purple-overlay position-absolute top-0 w-100'></div>
+                    <div className='back-content py-3 h-100 w-100 d-flex flex-column align-items-start justify-content-between'>
+                      <div className='pt-4 d-flex flex-column'>           
+                                 <span className='tag-course-white bg-white'><a href='#'>Arts & Science</a>
+                                 </span>
+                                 <h4 className='tag-heading text-start py-2 text-white'>Using Creative Problem Solving</h4>
+                                 <p className='rating-stars text-start py-1'><StarIcon style={{color:"yellow"}}/><StarIcon style={{color:"yellow"}}/><StarIcon style={{color:"yellow"}}/><StarIcon style={{color:"yellow"}}/><StarIcon style={{color:"yellow"}}/></p>
+                                 <p className='price-tag py-1 text-start text-white'>Price: $400</p>
+                                 
+                      </div>
+                      <div className='back-footer w-100 text-start'>
+                        <div className='Author-Wrapper text-white pb-3'><AccountCircleIcon style={{color:"#fff", marginRight:"10px", fontSize: "25px"}} />Alexandar Wang</div>
+                      <div className='d-flex w-100 mt-3 back-rating pt-2 justify-content-between'>
+                        <div className="book-container">
+                        <ImportContactsIcon style={{"color":"#fff"}}/>
+                        <span class="lessons-count text-white"> 10 Lessons</span>
+                        </div>
+                        <div><SupervisorAccountIcon style={{"color":"#fff"}}/> <span className='text-white taken-count'>480</span></div>
+                    </div>
+                    </div>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -51,9 +158,37 @@ function CoursesListing() {
 }
 const Wrapper = styled.section`
 background-color: #f7f6fa;
+.Author-Wrapper{
+  font-size: 20px;
+}
+.purple-overlay{
+  height: 100%;
+background: #5838fc;
+  opacity: 0.9;
+}
+.back-rating{
+  border-top: 2px dotted #fff;
+}
+.price-tag{
+  font-size: 23px;
+}
+.back-of-card{
+  background-repeat: no-repeat;
+  background-position: bottom;
+  background-size: contain;
+}
+
+.purple{
+  color:#7537f8;
+}
+.taken-count{
+  font-size: 13px;
+}
 .tag-heading{
   color: #2C234D;
-  line-height: 40px;
+  font-size: 25px;
+    font-family: 'Open Sans';
+    font-weight: 500;
 }
 .rating-section{
   border-top: 2px dotted #c3c2c8;
@@ -63,12 +198,15 @@ background-color: #f7f6fa;
   list-style: none;
 
 }
+.back-content {
+  z-index: 1;
+}
 .cat-image{
   width: 25px;
 }
 .tag-course{
   display: inline-block;
-    height: 26px;
+    height: 28px;
     background: rgba(252, 46, 144, .1);
     font-size: 13px;
     line-height: .8;
@@ -79,15 +217,32 @@ background-color: #f7f6fa;
     padding: 7px 11px;
     margin: 0 0 14px;
 }
+.tag-course-white{
+  display: inline-block;
+    height: 26px;
+    background: #fff !important;
+    font-size: 13px;
+    line-height: .8;
+    font-weight: 600;
+    text-align: center;
+    width: fit-content;
+    border-radius: 3px;
+    padding: 7px 11px;
+    margin: 0 0 14px;
+}
+.tag-course-white a{
+  color: #7537f8;
+  text-decoration: none;
+}
 .tag-course a{
   color: #fc2e90;
   text-decoration: none;
 }
 .course-card-image{
-  width: 200px;
+  width: 100%;
 }
 .courses_heading{
-  font-size: 40px;
+  font-size: 34px;
   font-family: 'Open Sans';
   width: 85%;
 }
@@ -110,7 +265,7 @@ font-family: 'Open Sans';
   cursor: pointer;
   /* width: calc(33% - 2rem);
   min-width: calc(33% - 2rem); */
-  min-height: 500px;
+  min-height: 520px;
   perspective: 1000px;
   position: relative;
 }
