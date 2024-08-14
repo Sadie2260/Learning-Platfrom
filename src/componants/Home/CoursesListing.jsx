@@ -1,4 +1,4 @@
-import React from 'react';
+import React,{useState} from 'react';
 import styled from 'styled-components';
 import bookImg from '../../assets/book.png';
 import CardImage from '../../assets/course-card-image.png';
@@ -7,6 +7,7 @@ import StarIcon from '@mui/icons-material/Star';
 import ImportContactsIcon from '@mui/icons-material/ImportContacts';
 import AccountCircleIcon from '@mui/icons-material/AccountCircle';
 function CoursesListing() {
+  const [first, setfirst] = useState("all");
   return (
     <Wrapper className='container-fluid py-4'>
       <section className='container py-3 mt-5'>
@@ -26,11 +27,11 @@ function CoursesListing() {
             </div>
           </div> 
           <div className='container pt-5'>
-            <div className='row'>
-              <div className="col-md-4 course-card-wrapper">
+            <div className='row' id="tabList">
+              <div className="col-md-4 course-card-wrapper mb-5">
                 <div className="feature-card-item card-flip">
                   <div className="front-of-card front pt-5 pb-2 shadow-lg bg-white d-flex flex-column align-items-center justify-content-center">
-                    <div className='py-3'> <img src={CardImage} className='course-card-image'/></div>
+                    <div className='py-1'> <img src={CardImage} className='course-card-image'/></div>
                     <div className="content-card text-start pt-3">
                       <span className='tag-course'><a href='#'>Arts & Science</a></span>
                        <h4 className='tag-heading'>Using Creative Problem Solving</h4>
@@ -38,7 +39,7 @@ function CoursesListing() {
                     <div className='rating-section d-flex w-100 mt-3 pt-2 justify-content-between'>
                         <div className="book-container">
                         <img src={bookImg} className='cat-image' alt='course image'/>
-                        <span class="lessons-count"> 10 Lessons</span>
+                        <span className="lessons-count"> 10 Lessons</span>
                         </div>
                         <div><SupervisorAccountIcon style={{"color":"#7537f8"}}/> <span className='purple taken-count'>480</span></div>
                     </div>
@@ -59,7 +60,7 @@ function CoursesListing() {
                       <div className='d-flex w-100 mt-3 back-rating pt-2 justify-content-between'>
                         <div className="book-container">
                         <ImportContactsIcon style={{"color":"#fff"}}/>
-                        <span class="lessons-count text-white"> 10 Lessons</span>
+                        <span className="lessons-count text-white"> 10 Lessons</span>
                         </div>
                         <div><SupervisorAccountIcon style={{"color":"#fff"}}/> <span className='text-white taken-count'>480</span></div>
                     </div>
@@ -68,10 +69,11 @@ function CoursesListing() {
                   </div>
                 </div>
               </div>
-              <div className="col-md-4 course-card-wrapper">
+             
+              <div className="col-md-4 course-card-wrapper mb-5">
                 <div className="feature-card-item card-flip">
                   <div className="front-of-card front pt-5 pb-2 shadow-lg bg-white d-flex flex-column align-items-center justify-content-center">
-                    <div className='py-3'> <img src={CardImage} className='course-card-image'/></div>
+                    <div className='py-1'> <img src={CardImage} className='course-card-image'/></div>
                     <div className="content-card text-start pt-3">
                       <span className='tag-course'><a href='#'>Arts & Science</a></span>
                        <h4 className='tag-heading'>Using Creative Problem Solving</h4>
@@ -79,7 +81,7 @@ function CoursesListing() {
                     <div className='rating-section d-flex w-100 mt-3 pt-2 justify-content-between'>
                         <div className="book-container">
                         <img src={bookImg} className='cat-image' alt='course image'/>
-                        <span class="lessons-count"> 10 Lessons</span>
+                        <span className="lessons-count"> 10 Lessons</span>
                         </div>
                         <div><SupervisorAccountIcon style={{"color":"#7537f8"}}/> <span className='purple taken-count'>480</span></div>
                     </div>
@@ -100,7 +102,7 @@ function CoursesListing() {
                       <div className='d-flex w-100 mt-3 back-rating pt-2 justify-content-between'>
                         <div className="book-container">
                         <ImportContactsIcon style={{"color":"#fff"}}/>
-                        <span class="lessons-count text-white"> 10 Lessons</span>
+                        <span className="lessons-count text-white"> 10 Lessons</span>
                         </div>
                         <div><SupervisorAccountIcon style={{"color":"#fff"}}/> <span className='text-white taken-count'>480</span></div>
                     </div>
@@ -109,10 +111,10 @@ function CoursesListing() {
                   </div>
                 </div>
               </div>
-              <div className="col-md-4 course-card-wrapper">
+              <div className="col-md-4 course-card-wrapper mb-5">
                 <div className="feature-card-item card-flip">
                   <div className="front-of-card front pt-5 pb-2 shadow-lg bg-white d-flex flex-column align-items-center justify-content-center">
-                    <div className='py-3'> <img src={CardImage} className='course-card-image'/></div>
+                    <div className='py-1'> <img src={CardImage} className='course-card-image'/></div>
                     <div className="content-card text-start pt-3">
                       <span className='tag-course'><a href='#'>Arts & Science</a></span>
                        <h4 className='tag-heading'>Using Creative Problem Solving</h4>
@@ -120,7 +122,7 @@ function CoursesListing() {
                     <div className='rating-section d-flex w-100 mt-3 pt-2 justify-content-between'>
                         <div className="book-container">
                         <img src={bookImg} className='cat-image' alt='course image'/>
-                        <span class="lessons-count"> 10 Lessons</span>
+                        <span className="lessons-count"> 10 Lessons</span>
                         </div>
                         <div><SupervisorAccountIcon style={{"color":"#7537f8"}}/> <span className='purple taken-count'>480</span></div>
                     </div>
@@ -141,7 +143,7 @@ function CoursesListing() {
                       <div className='d-flex w-100 mt-3 back-rating pt-2 justify-content-between'>
                         <div className="book-container">
                         <ImportContactsIcon style={{"color":"#fff"}}/>
-                        <span class="lessons-count text-white"> 10 Lessons</span>
+                        <span className="lessons-count text-white"> 10 Lessons</span>
                         </div>
                         <div><SupervisorAccountIcon style={{"color":"#fff"}}/> <span className='text-white taken-count'>480</span></div>
                     </div>
@@ -150,6 +152,130 @@ function CoursesListing() {
                   </div>
                 </div>
               </div>
+              <div className="col-md-4 course-card-wrapper mb-5">
+                <div className="feature-card-item card-flip">
+                  <div className="front-of-card front pt-5 pb-2 shadow-lg bg-white d-flex flex-column align-items-center justify-content-center">
+                    <div className='py-1'> <img src={CardImage} className='course-card-image'/></div>
+                    <div className="content-card text-start pt-3">
+                      <span className='tag-course'><a href='#'>Arts & Science</a></span>
+                       <h4 className='tag-heading'>Using Creative Problem Solving</h4>
+                    </div>
+                    <div className='rating-section d-flex w-100 mt-3 pt-2 justify-content-between'>
+                        <div className="book-container">
+                        <img src={bookImg} className='cat-image' alt='course image'/>
+                        <span className="lessons-count"> 10 Lessons</span>
+                        </div>
+                        <div><SupervisorAccountIcon style={{"color":"#7537f8"}}/> <span className='purple taken-count'>480</span></div>
+                    </div>
+                  </div>
+                  <div className="back-of-card shadow-lg back" style={{backgroundImage:`url("${CardImage}")`, backgroundPosition:"70% 75%",backgroundRepeat:"no-repeat", backgroundSize:"50% 50%"}}>
+                   <div className='purple-overlay position-absolute top-0 w-100'></div>
+                    <div className='back-content py-3 h-100 w-100 d-flex flex-column align-items-start justify-content-between'>
+                      <div className='pt-4 d-flex flex-column'>           
+                                 <span className='tag-course-white bg-white'><a href='#'>Arts & Science</a>
+                                 </span>
+                                 <h4 className='tag-heading text-start py-2 text-white'>Using Creative Problem Solving</h4>
+                                 <p className='rating-stars text-start py-1'><StarIcon style={{color:"yellow"}}/><StarIcon style={{color:"yellow"}}/><StarIcon style={{color:"yellow"}}/><StarIcon style={{color:"yellow"}}/><StarIcon style={{color:"yellow"}}/></p>
+                                 <p className='price-tag py-1 text-start text-white'>Price: $400</p>
+                                 
+                      </div>
+                      <div className='back-footer w-100 text-start'>
+                        <div className='Author-Wrapper text-white pb-3'><AccountCircleIcon style={{color:"#fff", marginRight:"10px", fontSize: "25px"}} />Alexandar Wang</div>
+                      <div className='d-flex w-100 mt-3 back-rating pt-2 justify-content-between'>
+                        <div className="book-container">
+                        <ImportContactsIcon style={{"color":"#fff"}}/>
+                        <span className="lessons-count text-white"> 10 Lessons</span>
+                        </div>
+                        <div><SupervisorAccountIcon style={{"color":"#fff"}}/> <span className='text-white taken-count'>480</span></div>
+                    </div>
+                    </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div className="col-md-4 course-card-wrapper mb-5">
+                <div className="feature-card-item card-flip">
+                  <div className="front-of-card front pt-5 pb-2 shadow-lg bg-white d-flex flex-column align-items-center justify-content-center">
+                    <div className='py-1'> <img src={CardImage} className='course-card-image'/></div>
+                    <div className="content-card text-start pt-3">
+                      <span className='tag-course'><a href='#'>Arts & Science</a></span>
+                       <h4 className='tag-heading'>Using Creative Problem Solving</h4>
+                    </div>
+                    <div className='rating-section d-flex w-100 mt-3 pt-2 justify-content-between'>
+                        <div className="book-container">
+                        <img src={bookImg} className='cat-image' alt='course image'/>
+                        <span className="lessons-count"> 10 Lessons</span>
+                        </div>
+                        <div><SupervisorAccountIcon style={{"color":"#7537f8"}}/> <span className='purple taken-count'>480</span></div>
+                    </div>
+                  </div>
+                  <div className="back-of-card shadow-lg back" style={{backgroundImage:`url("${CardImage}")`, backgroundPosition:"70% 75%",backgroundRepeat:"no-repeat", backgroundSize:"50% 50%"}}>
+                   <div className='purple-overlay position-absolute top-0 w-100'></div>
+                    <div className='back-content py-3 h-100 w-100 d-flex flex-column align-items-start justify-content-between'>
+                      <div className='pt-4 d-flex flex-column'>           
+                                 <span className='tag-course-white bg-white'><a href='#'>Arts & Science</a>
+                                 </span>
+                                 <h4 className='tag-heading text-start py-2 text-white'>Using Creative Problem Solving</h4>
+                                 <p className='rating-stars text-start py-1'><StarIcon style={{color:"yellow"}}/><StarIcon style={{color:"yellow"}}/><StarIcon style={{color:"yellow"}}/><StarIcon style={{color:"yellow"}}/><StarIcon style={{color:"yellow"}}/></p>
+                                 <p className='price-tag py-1 text-start text-white'>Price: $400</p>
+                                 
+                      </div>
+                      <div className='back-footer w-100 text-start'>
+                        <div className='Author-Wrapper text-white pb-3'><AccountCircleIcon style={{color:"#fff", marginRight:"10px", fontSize: "25px"}} />Alexandar Wang</div>
+                      <div className='d-flex w-100 mt-3 back-rating pt-2 justify-content-between'>
+                        <div className="book-container">
+                        <ImportContactsIcon style={{"color":"#fff"}}/>
+                        <span className="lessons-count text-white"> 10 Lessons</span>
+                        </div>
+                        <div><SupervisorAccountIcon style={{"color":"#fff"}}/> <span className='text-white taken-count'>480</span></div>
+                    </div>
+                    </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div className="col-md-4 course-card-wrapper mb-5">
+                <div className="feature-card-item card-flip">
+                  <div className="front-of-card front pt-5 pb-2 shadow-lg bg-white d-flex flex-column align-items-center justify-content-center">
+                    <div className='py-1'> <img src={CardImage} className='course-card-image'/></div>
+                    <div className="content-card text-start pt-3">
+                      <span className='tag-course'><a href='#'>Arts & Science</a></span>
+                       <h4 className='tag-heading'>Using Creative Problem Solving</h4>
+                    </div>
+                    <div className='rating-section d-flex w-100 mt-3 pt-2 justify-content-between'>
+                        <div className="book-container">
+                        <img src={bookImg} className='cat-image' alt='course image'/>
+                        <span className="lessons-count"> 10 Lessons</span>
+                        </div>
+                        <div><SupervisorAccountIcon style={{"color":"#7537f8"}}/> <span className='purple taken-count'>480</span></div>
+                    </div>
+                  </div>
+                  <div className="back-of-card shadow-lg back" style={{backgroundImage:`url("${CardImage}")`, backgroundPosition:"70% 75%",backgroundRepeat:"no-repeat", backgroundSize:"50% 50%"}}>
+                   <div className='purple-overlay position-absolute top-0 w-100'></div>
+                    <div className='back-content py-3 h-100 w-100 d-flex flex-column align-items-start justify-content-between'>
+                      <div className='pt-4 d-flex flex-column'>           
+                                 <span className='tag-course-white bg-white'><a href='#'>Arts & Science</a>
+                                 </span>
+                                 <h4 className='tag-heading text-start py-2 text-white'>Using Creative Problem Solving</h4>
+                                 <p className='rating-stars text-start py-1'><StarIcon style={{color:"yellow"}}/><StarIcon style={{color:"yellow"}}/><StarIcon style={{color:"yellow"}}/><StarIcon style={{color:"yellow"}}/><StarIcon style={{color:"yellow"}}/></p>
+                                 <p className='price-tag py-1 text-start text-white'>Price: $400</p>
+                                 
+                      </div>
+                      <div className='back-footer w-100 text-start'>
+                        <div className='Author-Wrapper text-white pb-3'><AccountCircleIcon style={{color:"#fff", marginRight:"10px", fontSize: "25px"}} />Alexandar Wang</div>
+                      <div className='d-flex w-100 mt-3 back-rating pt-2 justify-content-between'>
+                        <div className="book-container">
+                        <ImportContactsIcon style={{"color":"#fff"}}/>
+                        <span className="lessons-count text-white"> 10 Lessons</span>
+                        </div>
+                        <div><SupervisorAccountIcon style={{"color":"#fff"}}/> <span className='text-white taken-count'>480</span></div>
+                    </div>
+                    </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              
             </div>
           </div>
           </section>
@@ -167,7 +293,6 @@ background: #5838fc;
   opacity: 0.9;
 }
 .back-rating{
-  border-top: 2px dotted #fff;
 }
 .price-tag{
   font-size: 23px;
@@ -265,7 +390,7 @@ font-family: 'Open Sans';
   cursor: pointer;
   /* width: calc(33% - 2rem);
   min-width: calc(33% - 2rem); */
-  min-height: 520px;
+  min-height: 500px;
   perspective: 1000px;
   position: relative;
 }
