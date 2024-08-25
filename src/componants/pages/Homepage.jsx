@@ -13,7 +13,6 @@ function Homepage() {
         <CoursesListing/>
         <CategoriesSection/>
         <BlogsSection/>
-        <Footer/>
     </section>
   )
 }

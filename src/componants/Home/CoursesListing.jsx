@@ -12,10 +12,10 @@ function CoursesListing() {
     <Wrapper className='container-fluid py-4'>
       <section className='container py-3 mt-5'>
         <div className="row">
-          <div className="col-md-6">
+          <div className="col-lg-6">
           <h3 className="courses_heading">Find the Right
           <br/><b>Online Course for you</b></h3></div>
-          <div className="col-md-6 d-flex justify-content-start align-items-center">
+          <div className="col-lg-6 d-flex justify-content-start align-items-center">
             <div className="tabs w-100 d-flex justify-content-between align-items-center">
            <li><a className="a-tag-course" href='#'>All</a></li>
            <li><a className="a-tag-course" href='#'>Web Development</a></li>
@@ -28,7 +28,7 @@ function CoursesListing() {
           </div> 
           <div className='container pt-5'>
             <div className='row' id="tabList">
-              <div className="col-md-4 course-card-wrapper mb-5">
+              <div className="col-lg-4 col-md-6  course-card-wrapper mb-5">
                 <div className="feature-card-item card-flip">
                   <div className="front-of-card front pt-5 pb-2 shadow-lg bg-white d-flex flex-column align-items-center justify-content-center">
                     <div className='py-1'> <img src={CardImage} className='course-card-image'/></div>
@@ -70,7 +70,7 @@ function CoursesListing() {
                 </div>
               </div>
              
-              <div className="col-md-4 course-card-wrapper mb-5">
+              <div className="col-lg-4 col-md-6  course-card-wrapper mb-5">
                 <div className="feature-card-item card-flip">
                   <div className="front-of-card front pt-5 pb-2 shadow-lg bg-white d-flex flex-column align-items-center justify-content-center">
                     <div className='py-1'> <img src={CardImage} className='course-card-image'/></div>
@@ -111,7 +111,7 @@ function CoursesListing() {
                   </div>
                 </div>
               </div>
-              <div className="col-md-4 course-card-wrapper mb-5">
+              <div className="col-lg-4 col-md-6  course-card-wrapper mb-5">
                 <div className="feature-card-item card-flip">
                   <div className="front-of-card front pt-5 pb-2 shadow-lg bg-white d-flex flex-column align-items-center justify-content-center">
                     <div className='py-1'> <img src={CardImage} className='course-card-image'/></div>
@@ -152,7 +152,7 @@ function CoursesListing() {
                   </div>
                 </div>
               </div>
-              <div className="col-md-4 course-card-wrapper mb-5">
+              <div className="col-lg-4 col-md-6  course-card-wrapper mb-5">
                 <div className="feature-card-item card-flip">
                   <div className="front-of-card front pt-5 pb-2 shadow-lg bg-white d-flex flex-column align-items-center justify-content-center">
                     <div className='py-1'> <img src={CardImage} className='course-card-image'/></div>
@@ -193,7 +193,7 @@ function CoursesListing() {
                   </div>
                 </div>
               </div>
-              <div className="col-md-4 course-card-wrapper mb-5">
+              <div className="col-lg-4 col-md-6  course-card-wrapper mb-5">
                 <div className="feature-card-item card-flip">
                   <div className="front-of-card front pt-5 pb-2 shadow-lg bg-white d-flex flex-column align-items-center justify-content-center">
                     <div className='py-1'> <img src={CardImage} className='course-card-image'/></div>
@@ -234,7 +234,7 @@ function CoursesListing() {
                   </div>
                 </div>
               </div>
-              <div className="col-md-4 course-card-wrapper mb-5">
+              <div className="col-lg-4 col-md-6  course-card-wrapper mb-5">
                 <div className="feature-card-item card-flip">
                   <div className="front-of-card front pt-5 pb-2 shadow-lg bg-white d-flex flex-column align-items-center justify-content-center">
                     <div className='py-1'> <img src={CardImage} className='course-card-image'/></div>
@@ -396,8 +396,9 @@ font-family: 'Open Sans';
 }
 @media screen and (max-width: 800px) {
   .card-flip {
-    width: calc(50% - 2rem);
+    width: 100%;
   }
+
 }
 @media screen and (max-width: 500px) {
   .card-flip {
