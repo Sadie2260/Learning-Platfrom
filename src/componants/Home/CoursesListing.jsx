@@ -16,7 +16,7 @@ function CoursesListing() {
           <h3 className="courses_heading">Find the Right
           <br/><b>Online Course for you</b></h3></div>
           <div className="col-lg-6 d-flex justify-content-start align-items-center">
-            <div className="tabs w-100 d-flex justify-content-between align-items-center">
+            <div className="tabs w-100 d-flex justify-content-between flex-wrap align-items-center">
            <li><a className="a-tag-course" href='#'>All</a></li>
            <li><a className="a-tag-course" href='#'>Web Development</a></li>
            <li><a className="a-tag-course" href='#'>AI</a></li>

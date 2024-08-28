@@ -3,10 +3,14 @@ import styled from 'styled-components';
 import bannerImg from '../../assets/isometric-online-education-concept.png';
 import getBackgroundImage from '../../assets/banner (1).png';
 import sideImage from '../../assets/download.png';
+import shape1 from '../../assets/shape-1.png';
+import shape2 from '../../assets/shape-2.png';
+import shape3 from '../../assets/vecteezy_blue-diamond-gemstone-luxury_24085934.png';
+import shape4 from '../../assets/shape-4.png';
 
 function Banner() {
   return (
-    <Wrapper  style={{backgroundImage:`url('${getBackgroundImage}')`}}>
+    <Wrapper  style={{backgroundImage:`url('${getBackgroundImage}')`,overflow:"hidden"}}>
       <div className="container pt-5 banner_wrapper">
         <div className="row">
           <div className='col-md-5 d-flex align-items-center'>
@@ -321,6 +325,20 @@ function Banner() {
         </div>
       </div>
       <div className="side_image" style={{backgroundImage:`url("${sideImage}")`}}></div>
+      <div className="shape_wrapper">
+<div className="shape-1 d-md-block d-none">
+  <img src={shape1} alt="" />
+</div>
+<div className="shape-2 d-md-block d-none">
+<img src={shape2} alt="" />
+</div>
+<div className="shape-3 d-md-block d-none">
+<img src={shape3} width={50} alt="" />
+</div>
+<div className="shape-4 d-md-block d-none">
+  <img src={shape4} alt="" />
+</div>
+      </div>
     </Wrapper>
   )
 }
@@ -335,6 +353,44 @@ const Wrapper = styled.section`
     font-family:  "Open Sans";
     font-weight: 900;
   }
+  .shape_wrapper{
+    overflow: hidden;
+  }
+  .shape-1{
+    position: absolute;
+    overflow: hidden;
+
+    left: 3%;
+    right: 0;
+    bottom: 200px;
+    margin: auto;
+    text-align: center;
+    animation: animationFramesOne 20s infinite linear;
+  }
+  .shape-2{
+        position: absolute;
+        overflow: hidden;
+
+        left: 140px;
+    top: 45%;
+animation: animationFramesTwo 20s infinite linear;
+  }
+  .shape-3{
+    position: absolute;
+    overflow: hidden;
+
+    left: 60px;
+    top: 20%;
+    animation: animationFramesThree 20s infinite linear;
+  }
+  .shape-4{
+    position: absolute;
+    overflow: hidden;
+
+    left: 60px;
+    bottom: 80px;
+    animation: animationFramesTwo 20s infinite linear;
+  }
   .side_image{
     position: absolute;
     height: 100%;
@@ -342,6 +398,55 @@ const Wrapper = styled.section`
     top: 38%;
     background-repeat: no-repeat;
     background-position: center;
+  }
+  @keyframes animationFramesOne {
+    0% {
+    -webkit-transform: translate(0px, 0px) rotate(0deg);
+}
+20% {
+    -webkit-transform: translate(73px, -1px) rotate(36deg);
+}
+40% {
+    -webkit-transform: translate(141px, 72px) rotate(72deg);
+}
+60% {
+    -webkit-transform: translate(83px, 122px) rotate(108deg);
+}
+80% {
+    -webkit-transform: translate(-40px, 72px) rotate(144deg);
+}
+100% {
+    -webkit-transform: translate(0px, 0px) rotate(0deg);
+}
+  }
+  @keyframes animationFramesTwo {
+    0% {
+    -webkit-transform: translate(0px, 0px) rotate(0deg) scale(1);
+}
+20% {
+    -webkit-transform: translate(73px, -1px) rotate(36deg) scale(0.9);
+}
+40% {
+    -webkit-transform: translate(141px, 72px) rotate(72deg) scale(1);
+}
+60% {
+    -webkit-transform: translate(83px, 122px) rotate(108deg) scale(1.2);
+}
+80% {
+    -webkit-transform: translate(-40px, 72px) rotate(144deg) scale(1.1);
+}
+100% {
+    -webkit-transform: translate(0px, 0px) rotate(0deg) scale(1);
+}
+  }
+  @keyframes animationFramesThree {
+    0% {
+    transform: translate(165px, -179px);
+}
+100% {
+    transform: translate(-346px, 617px);
+}
+
   }
   .banner-p{
     font-size: 17px;

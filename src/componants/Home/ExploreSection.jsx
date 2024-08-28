@@ -23,7 +23,7 @@ function ExploreSection() {
          </div>
          <section className='container px-0 pt-5'>
          <div className='row'>
-          <div className='col-md-3 d-flex align-items-center mb-3 justify-content-center'>
+          <div className='col-lg-3 col-md-6 d-flex align-items-center mb-3 justify-content-center'>
             <div className='course-card'>
                 <div className='card-img-wrapper'><img src={ScienceImg} className='cousre-card-img' alt="card"/></div>
                 <div className='card-content-wrapper pt-3'>
@@ -31,7 +31,7 @@ function ExploreSection() {
                 </div>
             </div>
           </div>
-          <div className='col-md-3 d-flex align-items-center mb-3 justify-content-center'>
+          <div className='col-lg-3 col-md-6 d-flex align-items-center mb-3 justify-content-center'>
             <div className='course-card'>
                 <div className='card-img-wrapper'><img src={ScienceImg} className='cousre-card-img' alt="card"/></div>
                 <div className='card-content-wrapper pt-3'>
@@ -39,7 +39,7 @@ function ExploreSection() {
                 </div>
             </div>
           </div>
-          <div className='col-md-3 d-flex align-items-center mb-3 justify-content-center'>
+          <div className='col-lg-3 col-md-6 d-flex align-items-center mb-3 justify-content-center'>
             <div className='course-card'>
                 <div className='card-img-wrapper'><img src={ScienceImg} className='cousre-card-img' alt="card"/></div>
                 <div className='card-content-wrapper pt-3'>
@@ -47,7 +47,7 @@ function ExploreSection() {
                 </div>
             </div>
           </div>
-          <div className='col-md-3 d-flex align-items-center mb-3 justify-content-center'>
+          <div className='col-lg-3 col-md-6 d-flex align-items-center mb-3 justify-content-center'>
             <div className='course-card'>
                 <div className='card-img-wrapper'><img src={ScienceImg} className='cousre-card-img' alt="card"/></div>
                 <div className='card-content-wrapper pt-3'>
@@ -55,14 +55,7 @@ function ExploreSection() {
                 </div>
             </div>
           </div>
-          <div className='col-md-3 d-flex align-items-center mb-3 justify-content-center'>
-            <div className='course-card'>
-                <div className='card-img-wrapper'><img src={ScienceImg} className='cousre-card-img' alt="card"/></div>
-                <div className='card-content-wrapper pt-3'>
-                  <h4><a href='#'>Computer Science</a></h4>
-                </div>
-            </div>
-          </div>
+          
          </div>
          </section>
          <section className='container pt-5 mt-3'>
